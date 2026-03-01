@@ -1,0 +1,48 @@
+providers:
+  - name: "sonnet"
+    display_name: "Claude Sonnet 4.6"
+    category: "cloud"
+    base_url: "https://api.anthropic.com/v1"
+    api_key_env: "ANTHROPIC_API_KEY"
+    model_id: "claude-sonnet-4-6"
+    input_price: 3.00
+    output_price: 15.00
+    cached_input_price: 0.300
+    max_context_tokens: 200000
+    enabled: true
+
+  - name: "gemini"
+    display_name: "Gemini 3.1 Pro"
+    category: "cloud"
+    base_url: "https://generativelanguage.googleapis.com/v1beta/openai"
+    api_key_env: "GEMINI_API_KEY"
+    model_id: "gemini-3.1-pro-preview"
+    input_price: 2.00
+    output_price: 12.00
+    cached_input_price: 0.200
+    max_context_tokens: 1000000
+    enabled: true
+
+  - name: "qwen"
+    display_name: "Qwen 3.5 (self-hosted)"
+    category: "self_hosted"
+    base_url: "http://localhost:8000/v1"
+    api_key_env: null
+    model_id: "Qwen/Qwen3.5"
+    input_price: 0.60
+    output_price: 3.60
+    cached_input_price: 0.0
+    max_context_tokens: 131072
+    enabled: false
+
+  - name: "ollama-qwen35"
+    display_name: "Qwen 3.5 (Ollama local)"
+    category: "local"
+    base_url: "http://localhost:11434/v1"
+    api_key_env: null
+    model_id: "qwen3.5:cloud"
+    input_price: 0.550
+    output_price: 3.50
+    cached_input_price: 0.550
+    max_context_tokens: 8192
+    enabled: true

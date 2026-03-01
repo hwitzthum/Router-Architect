@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Logs
+logs/
+*.jsonl
+*.log
+
+# Environment / secrets
+.env
+.env.*
+*.key
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node (root-level safeguard; ui-web/.gitignore handles ui-web/node_modules)
+node_modules/
+
+# Next.js build output (root-level safeguard)
+.next/
+out/

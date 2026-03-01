@@ -1,0 +1,106 @@
+prompts:
+  # Reasoning (4)
+  - id: "r1"
+    category: "reasoning"
+    expected_task_type: "reasoning"
+    prompt: "Solve this logic puzzle: Five houses in a row, each a different color. The green house is immediately to the left of the white house. Who owns the fish?"
+
+  - id: "r2"
+    category: "reasoning"
+    expected_task_type: "reasoning"
+    prompt: "Prove that the square root of 2 is irrational."
+
+  - id: "r3"
+    category: "reasoning"
+    expected_task_type: "reasoning"
+    prompt: "If all bloops are razzles and all razzles are lazzles, are all bloops definitely lazzles? Explain your logic."
+
+  - id: "r4"
+    category: "reasoning"
+    expected_task_type: "reasoning"
+    prompt: "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Walk through your reasoning step by step."
+
+  # Knowledge work (4)
+  - id: "k1"
+    category: "knowledge_work"
+    expected_task_type: "knowledge_work"
+    prompt: "Evaluate the business strategy of a startup that wants to compete with Stripe in payment processing."
+
+  - id: "k2"
+    category: "knowledge_work"
+    expected_task_type: "knowledge_work"
+    prompt: "Analyze the key risks and mitigations for a company adopting a microservices architecture."
+
+  - id: "k3"
+    category: "knowledge_work"
+    expected_task_type: "knowledge_work"
+    prompt: "Write a detailed report on the trade-offs between PostgreSQL and MongoDB for a high-write e-commerce platform."
+
+  - id: "k4"
+    category: "knowledge_work"
+    expected_task_type: "knowledge_work"
+    prompt: "What are the most important factors to consider when expanding a SaaS product into European markets?"
+
+  # Code (4)
+  - id: "c1"
+    category: "code"
+    expected_task_type: "code"
+    prompt: "Write a Python function that implements a least-recently-used (LRU) cache from scratch without using OrderedDict."
+
+  - id: "c2"
+    category: "code"
+    expected_task_type: "code"
+    prompt: "Debug this code: def fib(n): return fib(n-1) + fib(n-2). It crashes for large n."
+
+  - id: "c3"
+    category: "code"
+    expected_task_type: "code"
+    prompt: "Refactor this function to be more readable and add type hints: def p(l): return [x for x in l if x%2==0]"
+
+  - id: "c4"
+    category: "code"
+    expected_task_type: "code"
+    prompt: "Write a async Python function that fetches URLs in parallel using aiohttp and returns results with error handling."
+
+  # Extraction (4)
+  - id: "e1"
+    category: "extraction"
+    expected_task_type: "extraction"
+    prompt: "Summarize the following paragraph in two sentences: The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for font testing and keyboard practice."
+
+  - id: "e2"
+    category: "extraction"
+    expected_task_type: "extraction"
+    prompt: "Translate the following to French: 'The meeting is scheduled for Monday at 3pm. Please bring your laptop and any relevant documents.'"
+
+  - id: "e3"
+    category: "extraction"
+    expected_task_type: "extraction"
+    prompt: "Extract all dates, names, and dollar amounts from: 'John Smith signed a contract on March 5, 2025 for $45,000 with Jane Doe.'"
+
+  - id: "e4"
+    category: "extraction"
+    expected_task_type: "extraction"
+    prompt: "Summarize this meeting transcript in bullet points: 'We discussed Q3 targets. Sales is at 80% of goal. Marketing needs more budget. Engineering shipped 3 features.'"
+
+  # Creative (2)
+  - id: "cr1"
+    category: "creative"
+    expected_task_type: "creative"
+    prompt: "Write a short poem about the feeling of seeing the first snow of winter."
+
+  - id: "cr2"
+    category: "creative"
+    expected_task_type: "creative"
+    prompt: "Brainstorm 10 unusual product ideas that combine AI with everyday household objects."
+
+  # General (2)
+  - id: "g1"
+    category: "general"
+    expected_task_type: "general"
+    prompt: "What time is it in Tokyo when it is 3pm in New York?"
+
+  - id: "g2"
+    category: "general"
+    expected_task_type: "general"
+    prompt: "What are some good habits to develop for better sleep?"
