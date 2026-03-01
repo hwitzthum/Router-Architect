@@ -1,0 +1,58 @@
+default_model: "sonnet"
+
+rules:
+  # High-complexity reasoning -> Gemini (ARC-AGI-2 leader at 77.1%)
+  - task_type: "reasoning"
+    complexity_min: 0.6
+    complexity_max: 1.0
+    target_model: "gemini"
+    fallback_chain: ["sonnet", "ollama-qwen35"]
+    priority: 1
+
+  # Knowledge work -> Sonnet (GDPval-AA Elo leader at 1633)
+  - task_type: "knowledge_work"
+    complexity_min: 0.0
+    complexity_max: 1.0
+    target_model: "sonnet"
+    fallback_chain: ["gemini"]
+    priority: 2
+
+  # High-complexity code -> Gemini
+  - task_type: "code"
+    complexity_min: 0.7
+    complexity_max: 1.0
+    target_model: "gemini"
+    fallback_chain: ["sonnet", "qwen"]
+    priority: 3
+
+  # Lower-complexity code -> Qwen/local (cost play)
+  - task_type: "code"
+    complexity_min: 0.0
+    complexity_max: 0.7
+    target_model: "qwen"
+    fallback_chain: ["ollama-qwen35", "sonnet"]
+    priority: 4
+
+  # Extraction / summarization -> local first (cheapest)
+  - task_type: "extraction"
+    complexity_min: 0.0
+    complexity_max: 1.0
+    target_model: "ollama-qwen35"
+    fallback_chain: ["qwen", "sonnet"]
+    priority: 5
+
+  # Creative -> Sonnet
+  - task_type: "creative"
+    complexity_min: 0.0
+    complexity_max: 1.0
+    target_model: "sonnet"
+    fallback_chain: ["gemini", "ollama-qwen35"]
+    priority: 6
+
+  # Low-complexity general -> cheapest available
+  - task_type: "general"
+    complexity_min: 0.0
+    complexity_max: 0.5
+    target_model: "ollama-qwen35"
+    fallback_chain: ["qwen", "sonnet"]
+    priority: 7

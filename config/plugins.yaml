@@ -1,0 +1,25 @@
+cache:
+  enabled: false
+  similarity_threshold: 0.92
+  max_entries: 10000
+
+safety:
+  jailbreak_detection:
+    enabled: false
+  pii_redaction:
+    enabled: false
+  prompt_injection:
+    enabled: false
+
+hallucination:
+  enabled: false
+  reroute_on_low_confidence: true
+  reroute_target: "sonnet"
+  confidence_threshold: 0.5
+
+embedding:
+  enabled: false
+  base_url: "http://localhost:11434/v1"
+  model: "nomic-embed-text"
+  similarity_threshold: 0.75
+  top_k: 3
