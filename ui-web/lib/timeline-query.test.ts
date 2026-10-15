@@ -7,7 +7,7 @@ describe("buildTimelineQuery", () => {
     const query = buildTimelineQuery({
       offset: 50,
       limit: 25,
-      model: "gpt-4o-mini",
+      model: "gpt-6-luna",
       taskType: "code",
       cacheHit: "true",
       fallbackTriggered: "false"
@@ -16,7 +16,7 @@ describe("buildTimelineQuery", () => {
 
     expect(params.get("offset")).toBe("50");
     expect(params.get("limit")).toBe("25");
-    expect(params.get("model")).toBe("gpt-4o-mini");
+    expect(params.get("model")).toBe("gpt-6-luna");
     expect(params.get("task_type")).toBe("code");
     expect(params.get("cache_hit")).toBe("true");
     expect(params.get("fallback_triggered")).toBe("false");
